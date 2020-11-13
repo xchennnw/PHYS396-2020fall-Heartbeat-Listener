@@ -1,0 +1,26 @@
+{
+  "name": "SlowControlDB",
+  "version": "1.0.0",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "luxon": "^1.25.0",
+    "pouchdb": "^7.2.2",
+    "pouchdb-authentication": "^1.1.3",
+    "react-helmet": "^6.1.0",
+    "react-load-script": "0.0.6"
+  },
+  "main": "js/index.js",
+  "author": "Tessa Condon",
+  "description": "This is specifically hard coded for the gas handling set up. Some custom changes must be made if you need it for a different setup.\r Contact Tessa for this!",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@132.206.126.37:tcondon/gas-handling-demo.git"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
