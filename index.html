@@ -17,10 +17,78 @@
 </head>
 <body>
 
-   <script data-main="js/index" src="js/require.js"></script>
 
-   <div id="graph"></div>
-   <script src="graph_component.js"></script>
+
+    <div id="graph"></div>
+
+
+   <script type="text/babel">
+    
+    class Graph extends React.Component {
+      constructor(props) {
+          super(props);
+          this.state = {date: new Date()};
+      }
+
+      componentDidMount() {
+        this.timerID = setInterval(
+               () => this.sss(),
+               5000
+            );
+     }
+
+      sss() {
+          this.setState({
+              date: new Date()
+           });
+          this.s1();
+          this.s2();
+      }
+
+      s1(){
+         var script = document.createElement("script");
+         script.async = true;
+         script.src = "js/require.js";
+         this.div.appendChild(script);
+      }
+
+      s2(){
+          const script2 = document.createElement("script");
+          script2.async = true;
+          script2.src = "js/index.js";
+          this.div.appendChild(script2);
+      }
+ 
+   
+      render() {
+
+          return (
+      
+             <div className="App" ref={el => (this.div = el)}>
+    
+                 <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+                 <div id="OMG_psig_data" style={{width:'100%', height:'400px'}}></div>
+                 <div id="OMG_V_data" style={{width:'100%', height:'400px'}}></div>
+                 <div id="BPT_psi_data" style={{width:'100%', height:'400px'}}></div>
+                 <div id="BPT_V_data" style={{width:'100%', height:'400px'}}></div>
+                 <div id="IX1_data" style={{width:'100%', height:'400px'}}></div>
+                 <div id="state_data" style={{width:'100%', height:'400px'}}></div>
+    
+              </div>
+    
+          )
+
+      }
+    }
+
+
+  const element = React.createElement(Graph, null);
+  const domContainer = document.querySelector('#graph');
+  ReactDOM.render(element, domContainer);
+
+  </script>
+    
+
     
 
 
