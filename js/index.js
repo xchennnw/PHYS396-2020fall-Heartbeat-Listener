@@ -1,14 +1,4 @@
 
-requirejs.config({
-    base_url: "js",
-    paths: {
-        "pouchdb": "../node_modules/pouchdb/dist/pouchdb",
-        "pouchdbA": "../node_modules/pouchdb-authentication/dist/pouchdb.authentication",
-        "luxon": "../node_modules/luxon/build/amd/luxon",
-        "slow": "./lib/slow_control"
-    }
-});
-
 requirejs(['slow'],
 function(slow){
 
